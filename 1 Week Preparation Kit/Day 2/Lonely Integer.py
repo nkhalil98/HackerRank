@@ -1,11 +1,11 @@
 def lonelyinteger(a):
-    seen = []
+    seen = set()
     for num in a:
         if num not in seen:
-            seen.append(num)
+            seen.add(num)
         else:
             seen.remove(num)
-    return seen[0]
+    return list(seen)[0]
 
 # another solution
 def lonely(a):
